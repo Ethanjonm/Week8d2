@@ -40,4 +40,26 @@ function addTo(num) {
   return num + acc
 }
 
-console.log([5, 3, 7].myReduce())
+// console.log([5, 3, 7].myReduce())
+// [4,2,5,1]  [1,2,4,5]
+Array.prototype.bubbleSort = function() {
+
+    let i = 0
+
+    while (i < this.length) {
+
+        if (this[i] > this[i + 1]) {
+            let a = this[i]
+            let b = this[i + 1]
+            this[i] = b
+            this[i + 1] = a
+            i = 0
+        } else {
+            i += 1
+        }
+
+    }
+    return this
+}
+
+console.log([4,2,5,1].bubbleSort())
