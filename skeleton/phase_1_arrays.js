@@ -41,17 +41,17 @@ Array.prototype.twoSum = function() {
 
 
 // emp = [[],[],[]]
-function transpose(array) {
+Array.prototype.transpose = function() {
     let newArr = [[],[],[]];
 
-    for (let i = 0; i < array.length; i += 1) {
+    for (let i = 0; i < this.length; i += 1) {
 
 
 
-        for (let j = 0; j < array[i].length; j += 1) {
+        for (let j = 0; j < this[i].length; j += 1) {
 
             
-            newArr[j].push(array[i][j])
+            newArr[j].push(this[i][j])
             
         }
     }
@@ -60,5 +60,5 @@ function transpose(array) {
 
 
 }
-
+console.log([[1,2,3],[4,5,6],[7,8,9]].transpose())
 // console.log(transpose([[1,2,3],[4,5,6],[7,8,9]]))
