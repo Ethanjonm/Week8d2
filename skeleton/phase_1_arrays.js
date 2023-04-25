@@ -1,9 +1,9 @@
-function uniq(array) {
+Array.prototype.uniq = function()  {
     let newArr = [];
 
-    for (let i = 0; i < array.length; i++) {
-        if (!newArr.includes(array[i])) {
-            newArr.push(array[i]) }
+    for (let i = 0; i < this.length; i++) {
+        if (!newArr.includes(this[i])) {
+            newArr.push(this[i]) }
     //         continue }
     //         else {
     //         newArr.push(array[i])
@@ -14,19 +14,19 @@ function uniq(array) {
 }
 
 // console.log(uniq([ 1, 2, 2, 3, 3, 3 ]))
-
+console.log([ 1, 2, 2, 3, 3, 3 ].uniq())
 // [1,-1,2,3,4,5,-3]
-function twoSum(array) {
+Array.prototype.twoSum = function() {
     let newArr = [];
 
-    for (let i = 0; i < array.length; i += 1) {
+    for (let i = 0; i < this.length; i += 1) {
 
 
 
-        for (let j = i + 1; j < array.length; j += 1) {
+        for (let j = i + 1; j < this.length; j += 1) {
 
-            if (array[i] + array[j] === 0) {
-                newArr.push([array[i], array[j]])
+            if (this[i] + this[j] === 0) {
+                newArr.push([this[i], this[j]])
             }
         }
     }
